@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رزومه - نام شما</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'vazir': ['Vazir', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazir:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Vazir', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #581c87 100%); }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px rgba(0,0,0,0.15); }
+        .skill-bar { transition: width 2s ease-in-out; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up { animation: fadeInUp 0.6s ease-out; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header Section -->
+    <header class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="w-32 h-32 bg-white rounded-full mx-auto mb-6 flex items-center justify-center text-6xl">
+                👨‍💻
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-in-up">یاشار رحمانی</h1>
+            <p class="text-xl md:text-2xl mb-6 fade-in-up">full stack developer</p>
+            <div class="flex justify-center space-x-4 space-x-reverse fade-in-up">
+                <button onclick="scrollToSection('contact')" class="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                    تماس با من
+                </button>
+                <button onclick="downloadResume()" class="border-2 border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition duration-300">
+                    دانلود رزومه
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">درباره من</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-xl p-10 card-hover border border-gray-100">
+                    <p class="text-lg leading-relaxed mb-6">
+                        سلام! من یاشار رحمانی هستم، یک توسعه‌دهنده پایتون و جنگو با تجربه در ساخت وبسایت‌های مدرن و کاربرپسند. 
+                        علاقه‌مند به تکنولوژی‌های جدید و همیشه در حال یادگیری هستم.
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl mb-2">📧</div>
+                            <p class="font-semibold">ایمیل</p>
+                            <p class="text-gray-600">yaratb396@gmail.com</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl mb-2">📱</div>
+                            <p class="font-semibold">تلفن</p>
+                            <p class="text-gray-600">۰۹۰۲۵۵۴۸۴۴۲</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl mb-2">📍</div>
+                            <p class="font-semibold">موقعیت</p>
+                            <p class="text-gray-600">تبریز ، ایران</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">مهارت‌ها</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-8">
+                        <div>
+                            <div class="flex justify-between mb-3">
+                                <span class="font-semibold text-lg">HTML/CSS</span>
+                                <span class="text-blue-600 font-bold">۸۵٪</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-4">
+                                <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-4 rounded-full skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-3">
+                                <span class="font-semibold text-lg">Python</span>
+                                <span class="text-green-600 font-bold">۹۰٪</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-4">
+                                <div class="bg-gradient-to-r from-green-500 to-green-600 h-4 rounded-full skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-3">
+                                <span class="font-semibold text-lg">Django</span>
+                                <span class="text-purple-600 font-bold">۸۰٪</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-4">
+                                <div class="bg-gradient-to-r from-purple-500 to-purple-600 h-4 rounded-full skill-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">تجربه کاری</h2>
+            <div class="text-center py-16">
+                <div class="text-6xl mb-6">💼</div>
+                <h3 class="text-2xl font-bold mb-4">آماده برای شروع کار</h3>
+                <p class="text-gray-600">در حال جستجوی فرصت‌های شغلی جدید هستم...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">پروژه‌ها</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl overflow-hidden shadow-lg card-hover border border-blue-200">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-6xl">
+                        🌐
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">پروژه اول</h3>
+                        <p class="text-gray-600 mb-4">توضیحات پروژه خود را اینجا بنویسید</p>
+                        <button onclick="openProject('project1')" class="text-blue-600 font-semibold hover:text-blue-800 transition duration-300">
+                            مشاهده پروژه ←
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl overflow-hidden shadow-lg card-hover border border-green-200">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-6xl">
+                        🐍
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">پروژه دوم</h3>
+                        <p class="text-gray-600 mb-4">توضیحات پروژه خود را اینجا بنویسید</p>
+                        <button onclick="openProject('project2')" class="text-green-600 font-semibold hover:text-green-800 transition duration-300">
+                            مشاهده پروژه ←
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl overflow-hidden shadow-lg card-hover border border-purple-200">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-6xl">
+                        ⚡
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">پروژه سوم</h3>
+                        <p class="text-gray-600 mb-4">توضیحات پروژه خود را اینجا بنویسید</p>
+                        <button onclick="openProject('project3')" class="text-purple-600 font-semibold hover:text-purple-800 transition duration-300">
+                            مشاهده پروژه ←
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">تماس با من</h2>
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-lg rounded-lg p-8">
+                    <form onsubmit="sendMessage(event)" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">نام</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50" placeholder="نام شما">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">ایمیل</label>
+                            <input type="email" required class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50" placeholder="ایمیل شما">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">پیام</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50" placeholder="پیام شما"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-white text-purple-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+                            ارسال پیام
+                        </button>
+                    </form>
+                    <div class="mt-8 text-center">
+                        <p class="mb-4">یا از طریق شبکه‌های اجتماعی:</p>
+                        <div class="flex justify-center space-x-4 space-x-reverse">
+                            <button onclick="openSocial('linkedin')" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition duration-300">
+                                💼
+                            </button>
+                            <button onclick="openSocial('github')" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition duration-300">
+                                🐙
+                            </button>
+                            <button onclick="openSocial('telegram')" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition duration-300">
+                                ✈️
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; ۱۴۰۳ یاشار رحمانی. تمامی حقوق محفوظ است.</p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        function downloadResume() {
+            alert('فایل رزومه در حال آماده‌سازی است...\n\nنکته: برای عملکرد کامل، فایل PDF رزومه خود را آماده کنید.');
+        }
+
+        function openProject(projectName) {
+            const projects = {
+                'project1': 'پروژه اول - لینک یا توضیحات پروژه خود را اینجا اضافه کنید',
+                'project2': 'پروژه دوم - لینک یا توضیحات پروژه خود را اینجا اضافه کنید',
+                'project3': 'پروژه سوم - لینک یا توضیحات پروژه خود را اینجا اضافه کنید'
+            };
+            alert(`${projects[projectName]}\n\nنکته: می‌توانید این قسمت را با لینک‌های واقعی پروژه‌هایتان جایگزین کنید.`);
+        }
+
+        function sendMessage(event) {
+            event.preventDefault();
+            alert('پیام شما دریافت شد!\n\nنکته: برای عملکرد کامل، فرم را به سرویس ایمیل متصل کنید.');
+        }
+
+        function openSocial(platform) {
+            const links = {
+                'linkedin': 'https://linkedin.com',
+                'github': 'https://github.com/yashar396', 
+                'telegram': 'https://t.me/ya_ra_tb2'
+            };
+            
+            if (platform === 'github') {
+                window.open(links[platform], '_blank');
+            } else if (platform === 'telegram') {
+                window.open(links[platform], '_blank');
+            } else {
+                alert('لینک LinkedIn را اضافه کنید');
+            }
+        }
+
+        // Animate skill bars on scroll
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.width = entry.target.style.width;
+                    }
+                });
+            });
+
+            skillBars.forEach(bar => observer.observe(bar));
+        }
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            animateSkillBars();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'970b6526847cdbb0',t:'MTc1NTQ1NzAyNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
